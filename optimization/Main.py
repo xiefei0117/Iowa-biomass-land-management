@@ -14,6 +14,6 @@ sustainability_cost = {"sci" : 0.0,
 
 biofuel_demand = 30000000
 
-Nevada = Fuelshed_Model("test", sustainability_cost, biofuel_demand, 10, 101, "cplex")
+Nevada = Fuelshed_Model("baseline", sustainability_cost, biofuel_demand, 10, 21, "cplex_direct")
 Nevada.solve()
 

@@ -23,7 +23,7 @@ class Farmers_Model(AbstractModel):
         self._area = pyo.Param(self.FIELDS, domain = pyo.NonNegativeReals) #acre
         self._unit_cost_scenario = pyo.Param(self.SCENARIOS, domain = pyo.NonNegativeReals) #$/acre
         self._inconvience_cost = pyo.Param(domain = pyo.NonNegativeReals) #$/acre
-        self._yield = pyo.Param(self.FIELDS, self.SCENARIOS, self.PRODS, domain = pyo.NonNegativeReals) #tons
+        self._yield = pyo.Param(self.FIELDS, self.SCENARIOS, self.PRODS, domain = pyo.Reals) #tons
         self._price_for_biofuel = pyo.Param(self.PRODS, domain = pyo.NonNegativeReals) #$/tons
         self._price_for_other = pyo.Param(self.PRODS, domain = pyo.NonNegativeReals) #$/tons
         self._conversion_rate = pyo.Param(self.PRODS, domain = pyo.NonNegativeReals) #gallons/ton

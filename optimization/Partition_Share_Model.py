@@ -16,8 +16,8 @@ class Partition_Share_Model(AbstractModel):
         self.subAreas = pyo.Set() #0, 1, 2,... 10
         self.shareLevels = pyo.Set()  #0, 1, 2, 3, 4, ..., 100
         self._profit_by_share_area = pyo.Param(self.subAreas, self.shareLevels, domain = pyo.Reals)
-        self._share = pyo.Param(self.shareLevels, domain = pyo.Reals)
-        self._total_share = pyo.Param(domain = pyo.Reals)
+        self._share = pyo.Param(self.shareLevels, domain = pyo.Reals)    #share for each interval level, self.shareLevels
+        self._total_share = pyo.Param(domain = pyo.Reals)      #100
         
         self.Share_Implement = pyo.Var(self.subAreas, self.shareLevels, domain = pyo.Binary)
         
